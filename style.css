@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1A1E2D;
+}
+
+.main-container {
+    width: max-content;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter-container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    font-family: "Jost", sans-serif;
+    font-size: 64px;
+    color: #fff;
+}
+
+.blinker {
+    width: 3px;
+    height: 64px;
+    background-color: #fff;
+    animation-name: b1;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes b1 {
+    10% { display: none; visibility: hidden; }
+    100% { display: block; visibility: block; }
+}
