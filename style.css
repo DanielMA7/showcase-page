@@ -1,3 +1,11 @@
+/*     Setting variables for ease of use    */
+
+:root {
+    --primary-bg: #0A192F;
+    --primary-text: #CCD6F6;
+}
+
+
 * {
     padding: 0px;
     margin: 0;
@@ -7,41 +15,145 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #1A1E2D;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    position: relative;
+    height: max-content;
+    overflow-x: hidden;
+    flex-direction: column;
+    font-family: "Jost", sans-serif;
 }
 
-.main-container {
-    width: max-content;
+.home {
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+
+
 .typewriter-container {
-    width: 500px;
+    width: max-content;
     height: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
-span {
+.typewriter-container span {
     font-family: "Jost", sans-serif;
-    font-size: 64px;
-    color: #fff;
+    font-size: 100px;
 }
 
 .blinker {
     width: 3px;
-    height: 64px;
-    background-color: #fff;
+    height: 74px;
+    background-color: var(--primary-text);
     animation-name: b1;
-    animation-duration: 1s;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
 }
 
+.side-links {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 75%;
+    left: 90%;
+    
+}
+
+.side-links div {
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    font-family: "Jost", sans-serif;
+    align-items: end;
+    gap: 10px;
+}
+
+.side-links div a {
+    font-style: none;
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+.about-me {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    
+}
+
+.about-me div {
+    display: flex;
+    padding-left: 40px;
+}
+
+h2 {
+    font-family: "Jost", sans-serif;
+    font-size: 64px;
+}
+
+.about-me-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+} 
+.about-me-holder div {
+    display: flex;
+    width: max-content;
+    height: max-content;
+}
+
+.about-me-holder div img {
+    animation: myAnim 2s ease-out 0s infinite normal forwards;
+}
+
+.about-me-text {
+    font-size: 22px;
+}
+
+
+
+/*                              Animations                              */
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: translateX(0%);
+		transform-origin: 50% 50%;
+	}
+
+	15% {
+		transform: translateX(-30px) rotate(-6deg);
+	}
+
+	30% {
+		transform: translateX(15px) rotate(6deg);
+	}
+
+	45% {
+		transform: translateX(-15px) rotate(-3.6deg);
+	}
+
+	60% {
+		transform: translateX(9px) rotate(2.4deg);
+	}
+
+	75% {
+		transform: translateX(-6px) rotate(-1.2deg);
+	}
+}
 @keyframes b1 {
-    10% { display: none; visibility: hidden; }
-    100% { display: block; visibility: block; }
+    10% { background-color: var(--primary-bg); }
+    100% { background-color: var(--primary-text); }
 }

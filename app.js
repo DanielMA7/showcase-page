@@ -1,5 +1,5 @@
 const typewriterContainer = document.getElementById("letter-container")
-const myName = "Hello world!"
+const myName = "hey, its daniel!"
 let time = 200
 let i = 0
 let forward = true
@@ -9,7 +9,12 @@ function typewriter() {
     if (forward == true){
         if(i < myName.length) {
             letters.innerHTML = myName.charAt(i)
+            letters.style.color = "#CCD6F6"
             typewriterContainer.appendChild(letters)
+            if(i >= 9 && i < myName.length-1) {
+                letters.style.color = "#64FFDA"
+                typewriterContainer.appendChild(letters)
+            }
             i++
         }else{
             forward = false
@@ -27,3 +32,5 @@ function typewriter() {
 }
 
 typewriter()
+
+console.log
