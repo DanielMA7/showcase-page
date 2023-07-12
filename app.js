@@ -43,3 +43,5 @@ function changeImage (x) {
     activeBtn.classList.remove("inactive-btn")
     document.getElementById("img-slide").src =`./assets/slider/Image${x}.jpg`
 }
+
+
