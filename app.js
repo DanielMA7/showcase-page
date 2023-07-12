@@ -1,8 +1,7 @@
 const typewriterContainer = document.getElementById("letter-container")
 const myName = "hey, its daniel!"
-let time = 200
-let i = 0
 let forward = true
+let i = 0
 
 function typewriter() {
     let letters = document.createElement("span")
@@ -28,9 +27,19 @@ function typewriter() {
             forward = true
         }
     }
-    setTimeout(typewriter, time)
+    setTimeout(typewriter, 200)
 }
 
 typewriter()
 
-console.log
+let sliderBtns = ["btn-1","btn-2","btn-3","btn-4"]
+
+function changeImage (x) {
+    let activeBtn = document.getElementById("btn-"+x)
+
+    for(let i = 0; i < sliderBtns.length; i++) {
+        document.getElementById(sliderBtns[i]).classList.add("inactive-btn")
+    }
+    activeBtn.classList.remove("inactive-btn")
+    document.getElementById("img-slide").src =`./assets/slider/Image${x}.jpg`
+}
