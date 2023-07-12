@@ -34,13 +34,30 @@
             <h2>/about-me</h2>
         </div>
         <div class="about-me-holder">
-            <div style="width: 400px;">
+            <div style="width: 370px;">
                 <span class="about-me-text">Hi there, I'm a video editor that's trying to become a software engineer! <br><br>I love video editing and have been doing it for 3 years now, however I realised that I enjoyed it more as a hobby whereas software development was something I could persue a career in and enjoy doing!</span>
             </div>
             <div class="">
-                <img src="./assets/video-editing.png" width="450px">
+                <img src="./assets/video-editing.png" alt="An image of a low resolution editing software screen" width="450px">
             </div>
         </div>
+        <div class="about-me-bottom">
+            <div class="about-me-3d-holder">
+                    <img src="./assets/slider/Image1.jpg" alt="Images of my 3D designs" class="about-me-3d-image" id="img-slide">
+                    <div>
+                        <button class="active-btn" id="btn-1" onclick="changeImage (1)"></button>
+                        <button class="inactive-btn" id="btn-2" onclick="changeImage (2)"></button>
+                        <button class="inactive-btn" id="btn-3" onclick="changeImage (3)"></button>
+                        <button class="inactive-btn" id="btn-4" onclick="changeImage (4)"></button>
+                    </div>
+            </div>
+            <div>
+                <span class="about-me-text">Another hobby of mine is 3D design! This is something I have been doing for many, many years now for fun. I believe 3D design has helped me have a creative outlet that I can do from the comfort of my home! I use <a href="https://blender.org" target="_blank">Blender</a> for all of my 3D work &#40;it's a free 3D design software&#41;. Here's a few examples of my work.</span>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-indicator">
+        <img src="./assets/arrow-indicator.png" class="arrow-indicator" alt="An image of an arrow indicating to scroll downward">
     </div>
     <script src="/app.js"></script>
 </body>

@@ -3,6 +3,7 @@
 :root {
     --primary-bg: #0A192F;
     --primary-text: #CCD6F6;
+    --secondary-dark-bg: #1C1C25;
 }
 
 
@@ -22,6 +23,7 @@ body {
     overflow-x: hidden;
     flex-direction: column;
     font-family: "Jost", sans-serif;
+    padding-bottom: 5em;
 }
 
 .home {
@@ -83,16 +85,15 @@ body {
 
 .about-me {
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     display: flex;
     flex-direction: column;
-    gap: 4rem;
-    
+    gap: 100px;
+    padding-left: 40px;
 }
 
 .about-me div {
     display: flex;
-    padding-left: 40px;
 }
 
 h2 {
@@ -115,18 +116,127 @@ h2 {
 }
 
 .about-me-holder div img {
-    animation: myAnim 2s ease-out 0s infinite normal forwards;
+    animation: imageShake 2s ease-out 0s infinite normal forwards;
+    box-shadow: 0 4px 30px rgba(0,0,0,.5);
 }
 
 .about-me-text {
     font-size: 22px;
 }
 
+.about-me-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
 
+.about-me-bottom div span {
+    width: 370px;
+}
+
+.about-me-3d-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    height: max-content;
+    padding-left: 0px;
+}
+
+
+.about-me-3d-holder img {
+    width: 300px;
+    height: 280px;
+    border-radius: 10px;
+    transition: scale 2s;
+}
+
+.about-me-3d-holder div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-me-3d-holder div button {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border-style: none;
+}
+
+.about-me-3d-holder div button:hover { 
+    cursor: pointer;
+}
+
+.inactive-btn {
+    opacity: 0.3;
+    transition: opacity 0.5s;
+}
+
+.inactive-btn:hover {
+    opacity: 0.6;
+}
+
+
+.scroll-indicator {
+    position: fixed;
+    top: 93%;
+}
+
+.arrow-indicator {
+    width: 30px;
+    height: 30px;
+    top: 95%;
+    animation: arrowBounce 2s ease 0s infinite normal forwards;
+}
 
 /*                              Animations                              */
 
-@keyframes myAnim {
+@keyframes arrowBounce {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 1;
+		transform: translateY(-45px);
+	}
+
+	24% {
+		opacity: 1;
+	}
+
+	40% {
+		animation-timing-function: ease-in;
+		transform: translateY(-24px);
+	}
+
+	65% {
+		animation-timing-function: ease-in;
+		transform: translateY(-12px);
+	}
+
+	82% {
+		animation-timing-function: ease-in;
+		transform: translateY(-6px);
+	}
+
+	25%,
+	55%,
+	75%,
+	87% {
+		animation-timing-function: ease-out;
+		transform: translateY(0px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes imageShake {
 	0%,
 	100% {
 		transform: translateX(0%);
@@ -153,6 +263,7 @@ h2 {
 		transform: translateX(-6px) rotate(-1.2deg);
 	}
 }
+
 @keyframes b1 {
     10% { background-color: var(--primary-bg); }
     100% { background-color: var(--primary-text); }
