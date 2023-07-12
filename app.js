@@ -41,7 +41,7 @@ function changeImage (x) {
         document.getElementById(sliderBtns[i]).classList.add("inactive-btn")
     }
     activeBtn.classList.remove("inactive-btn")
-    document.getElementById("img-slide").src =`./assets/slider/Image${x}.jpg`
+    document.getElementById("img-slide").src =`https://danielma7.github.io/showcase-page/assets/slider/Image${x}.jpg`
 }
 
 
